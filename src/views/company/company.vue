@@ -68,7 +68,8 @@ const delComp = (idx) => {
           <div class="input-group">
             <input
               type="text"
-              class="form-control"
+              :role="!company.editMode ? 'button' : ''"
+              class="form-control cursor-pointer"
               :class="company.editMode ? '' : 'bg-transparent border-0'"
               v-model="company.name"
               :disabled="!company.editMode"
